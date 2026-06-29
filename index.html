@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendataan Warga 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="demo-card census-card" aria-labelledby="page-title">
+      <div class="portal-header">
+        <div class="portal-mark" aria-hidden="true">PW</div>
+        <div>
+          <p class="eyebrow">Pendataan Warga 2026</p>
+          <h1 id="page-title">Form Pembaruan Data Warga</h1>
+        </div>
+      </div>
+
+      <p class="lead">
+        Lengkapi data umum berikut untuk proses pembaruan data wilayah.
+      </p>
+
+      <div class="fake-meta" aria-label="Informasi formulir">
+        <div>
+          <span>Kode formulir</span>
+          <strong>PDW-2026-REG</strong>
+        </div>
+        <div>
+          <span>Tahap</span>
+          <strong>Verifikasi lokasi</strong>
+        </div>
+      </div>
+
+      <form class="census-form" id="censusForm">
+        <div class="form-field">
+          <label for="respondentCode">Nama Lengkap</label>
+          <input id="respondentCode" name="respondentCode" type="text" value="Ananda rizki" maxlength="12" autocomplete="off" required>
+          <p class="helper-text">Gunakan nama lengkap sesuai dengan KTP.</p>
+        </div>
+
+        <div class="form-field">
+          <label for="ageRange">Rentang usia</label>
+          <select id="ageRange" name="ageRange" required>
+            <option value="">Pilih rentang</option>
+            <option value="17-25">17-25 tahun</option>
+            <option value="26-35">26-35 tahun</option>
+            <option value="36-45">36-45 tahun</option>
+            <option value="46+">46 tahun ke atas</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="householdSize">Jumlah anggota rumah</label>
+          <select id="householdSize" name="householdSize" required>
+            <option value="">Pilih jumlah</option>
+            <option value="1">1 orang</option>
+            <option value="2">2 orang</option>
+            <option value="3-4">3-4 orang</option>
+            <option value="5+">5 orang atau lebih</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="housingStatus">Status tempat tinggal</label>
+          <select id="housingStatus" name="housingStatus" required>
+            <option value="">Pilih status</option>
+            <option value="milik-sendiri">Milik sendiri</option>
+            <option value="kontrak-sewa">Kontrak/sewa</option>
+            <option value="keluarga">Tinggal bersama keluarga</option>
+            <option value="lainnya">Lainnya</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="internetAccess">Akses internet utama</label>
+          <select id="internetAccess" name="internetAccess" required>
+            <option value="">Pilih akses</option>
+            <option value="seluler">Data seluler</option>
+            <option value="wifi-rumah">Wi-Fi rumah</option>
+            <option value="wifi-publik">Wi-Fi publik</option>
+            <option value="campuran">Campuran</option>
+          </select>
+        </div>
+
+        <div class="form-field full-span">
+          <label for="areaCode">Wilayah pendataan</label>
+          <select id="areaCode" name="areaCode" required>
+            <option value="">Pilih wilayah</option>
+            <option value="zona-a">Zona A</option>
+            <option value="zona-b">Zona B</option>
+            <option value="zona-c">Zona C</option>
+          </select>
+          <p class="helper-text">Dimohon untuk memilih wilayah yang sesuai dengan tempat tinggal Anda.</p>
+        </div>
+
+        <label class="checkbox-field full-span">
+          <input id="consentCheck" name="consentCheck" type="checkbox" required>
+          <span>Jika Data Sesuai data anda akan disimpan.</span>
+        </label>
+
+        <button class="primary-button full-span" id="startDemo" type="submit">
+          Kirim Form
+        </button>
+      </form>
+
+      <p class="status-message" id="statusMessage" aria-live="polite">
+        Form belum dikirim dan browser belum diminta membaca lokasi.
+      </p>
+
+      <div class="result-area hidden" id="resultArea" aria-live="polite">
+        <div class="form-summary" id="formSummary"></div>
+
+        <div class="result-grid">
+          <div>
+            <span>Latitude</span>
+            <strong id="latitudeValue">-</strong>
+          </div>
+          <div>
+            <span>Longitude</span>
+            <strong id="longitudeValue">-</strong>
+          </div>
+          <div>
+            <span>Akurasi</span>
+            <strong id="accuracyValue">-</strong>
+          </div>
+          <div>
+            <span>Waktu akses</span>
+            <strong id="timestampValue">-</strong>
+          </div>
+        </div>
+
+        <a class="map-link" id="mapsLink" href="#" target="_blank" rel="noopener noreferrer">
+          Buka titik lokasi di Google Maps
+        </a>
+
+        <div class="user-agent-box">
+          <span>User agent perangkat</span>
+          <code id="userAgentValue">-</code>
+        </div>
+
+        <p class="education-alert">
+          Dampak demo: setelah pengguna mengirim form dan menekan Izinkan, website dapat membaca isian form, koordinat lokasi real, akurasi, waktu akses, dan user agent perangkat.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

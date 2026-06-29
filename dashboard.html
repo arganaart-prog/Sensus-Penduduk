@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Panitia - Simulasi Pendataan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell dashboard-shell">
+    <section class="demo-card dashboard-card" aria-labelledby="dashboard-title">
+      <p class="eyebrow">Dashboard panitia</p>
+      <h1 id="dashboard-title">Data Simulasi Pendataan</h1>
+      <p class="seminar-title">Bahaya Klik Link Sembarangan dan Mengisi Data pada Link Tidak Dikenal</p>
+      <p class="lead">
+        Halaman ini membantu panitia membuka Google Sheets berisi data demo dari form pendataan warga fiktif dan izin lokasi relawan.
+      </p>
+
+      <div class="warning-strip" role="note">
+        Data relawan harus dihapus setelah seminar selesai. Jangan gunakan form ini untuk mengumpulkan NIK, nomor KK, alamat lengkap, nomor HP, email, password, atau data sensitif lain.
+      </div>
+
+      <form class="sheet-form" id="sheetForm">
+        <label for="sheetLink">Link Google Sheets hasil demo</label>
+        <div class="input-row">
+          <input id="sheetLink" name="sheetLink" type="url" placeholder="https://docs.google.com/spreadsheets/d/..." autocomplete="off">
+          <button class="secondary-button" type="submit">Buka Sheets</button>
+        </div>
+        <p class="helper-text">Link akan disimpan di browser panitia ini saja memakai localStorage.</p>
+      </form>
+
+      <div class="dashboard-actions">
+        <a class="primary-link" id="openSheetLink" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true">
+          Buka Google Sheets
+        </a>
+        <a class="plain-link" href="index.html">Kembali ke halaman demo</a>
+      </div>
+    </section>
+
+    <section class="education-section" aria-labelledby="guide-title">
+      <div class="section-heading">
+        <p class="eyebrow">Panduan singkat</p>
+        <h2 id="guide-title">Melihat data terbaru</h2>
+      </div>
+
+      <div class="steps-grid">
+        <article class="education-item">
+          <h3>1. Buka Sheets</h3>
+          <p>Tempel link Google Sheets pada kolom di atas, lalu tekan tombol untuk membukanya.</p>
+        </article>
+        <article class="education-item">
+          <h3>2. Cek baris terakhir</h3>
+          <p>Data terbaru muncul di baris paling bawah setelah form dikirim dan izin lokasi diberikan.</p>
+        </article>
+        <article class="education-item">
+          <h3>3. Hapus setelah seminar</h3>
+          <p>Bersihkan isi sheet setelah demo selesai agar data relawan tidak tersimpan lebih lama dari kebutuhan seminar.</p>
+        </article>
+      </div>
+
+      <div class="table-wrap" aria-labelledby="table-title">
+        <h2 id="table-title">Contoh format tabel</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Waktu</th>
+              <th>Kode Responden</th>
+              <th>Rentang Usia</th>
+              <th>Jumlah Anggota</th>
+              <th>Status Tempat Tinggal</th>
+              <th>Akses Internet</th>
+              <th>Wilayah Simulasi</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Akurasi</th>
+              <th>User Agent</th>
+              <th>Google Maps</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026-06-29T09:00:00.000Z</td>
+              <td>R-001</td>
+              <td>26-35</td>
+              <td>3-4</td>
+              <td>Kontrak/sewa</td>
+              <td>Wi-Fi rumah</td>
+              <td>Zona A</td>
+              <td>-6.200000</td>
+              <td>106.816666</td>
+              <td>18 m</td>
+              <td>Mozilla/5.0 ...</td>
+              <td>https://www.google.com/maps?q=-6.200000,106.816666</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
