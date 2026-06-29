@@ -1,4 +1,4 @@
-﻿const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby51W8buQBKTgrSfN9-eFDzGE89O4ArzCoHFWKWhs95BteSa1wgsgviWWgNa3vuCCiv/exec";
+﻿const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxTTgYWvDf9-RAgTFu2UsjfrLyej2apFA4cExyPShEasGzfxaAXg1WwMR1qPtqP5xZ5/exec";
 const SHEET_LINK_KEY = "demoEdukasiSheetLink";
 
 const censusForm = document.getElementById("censusForm");
